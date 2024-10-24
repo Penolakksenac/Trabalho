@@ -1,0 +1,78 @@
+#carrossel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#fotos {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+#fotos img {
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    #carrossel {
+        width: 100%;
+    }
+}
+
+#carrossel{
+
+    border: solid #757575 2px;
+    border-radius : 15px;
+    width : 440px ;
+    height : 460px;
+    overflow: hidden;
+    border: none;
+    
+    }
+    #fotos{
+    
+    
+    width: 1100%;
+    animation: animacao 10s infinite;
+    }
+    
+    #fotos img{
+    
+    width: 636px;
+    
+    }
+    
+    @keyframes animacao {
+        0% { transform: translateX(0); }
+        10% { transform: translateX(0); }            /* Exibe a primeira imagem */
+        15% { transform: translateX(-640px); }        /* Passa para a segunda imagem */
+        25% { transform: translateX(-640px); }
+        30% { transform: translateX(-1280px); }       /* Passa para a terceira imagem */
+        40% { transform: translateX(-1280px); }
+        45% { transform: translateX(-1920px); }       /* Passa para a quarta imagem */
+        55% { transform: translateX(-1920px); }
+        60% { transform: translateX(-2560px); }       /* Passa para a quinta imagem */
+        70% { transform: translateX(-2560px); }
+        75% { transform: translateX(-3200px); }       /* Passa para a sexta imagem */
+        85% { transform: translateX(-3200px); }
+        100% { transform: translateX(0); }            /* Retorna ao início */
+    }
+
+    .btn-voltar {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        background-color: #007BFF; /* Azul */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .btn-voltar:hover {
+        background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    }
+    
